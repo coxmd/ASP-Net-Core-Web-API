@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using WebAPIDemo.Models.Validations;
 
 namespace WebAPIDemo.Models
 {
@@ -11,6 +12,7 @@ namespace WebAPIDemo.Models
         public string? Color { get; set; }
         [Required]
         public string? Gender { get; set; }
+        [Shirt_EnsureCorrectSizing]
         public int? Size { get; set; }
         public double? Price { get; set; }
     }
